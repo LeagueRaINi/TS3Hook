@@ -76,7 +76,7 @@ static auto process_packet(Packet* packet) -> void
     }
 
 #ifdef _DEBUG
-    std::cout << str << std::endl;
+    std::cout << "[OUT] " << str << std::endl;
 #endif
 }
 
