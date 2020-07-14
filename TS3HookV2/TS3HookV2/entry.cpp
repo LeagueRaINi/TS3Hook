@@ -6,6 +6,8 @@
 #include <regex>
 #include <thread>
 
+using namespace std::literals;
+
 static void* packet_detour_ret = nullptr;
 
 const auto client_version_regex = std::regex(R"(client_version=([^\s]+)\\s\[Build:\\s([0-9]+)\])");
@@ -109,7 +111,7 @@ static auto process_packet(Packet* packet) -> void
         std::cout << "searching pattern..." << std::endl;
 
         const auto packet_off = shared::pattern_scanner::scan("ts3client_win64.exe",
-            "\x80\x7C\x24\x00\x00\x75\x1A", "xxx??xx", -13);
+            "\x80\x7C\x24\x00\x00\x75\x1A"sv, "xxx??xx", -13);
 
         if (!packet_off)
         {

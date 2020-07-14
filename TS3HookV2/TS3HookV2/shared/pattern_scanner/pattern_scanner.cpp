@@ -18,7 +18,7 @@ namespace shared::pattern_scanner
 		const auto end_address = start_address + module_info.SizeOfImage;
 
 		auto signature = std::vector<std::pair<std::uint8_t, bool>>{};
-		for (auto i = 0; mask[i]; i++)
+		for (auto i = 0; i < mask.length(); i++)
 			signature.emplace_back(pattern[i], mask[i] == 'x');
 
 		const auto ret = std::search(start_address, end_address, signature.begin(), signature.end(),
