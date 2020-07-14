@@ -1,2 +1,5 @@
-# TS3Hook
-* Intercepts teamspeak command packets and gives you the ability to change them
+# Info
+* Supports teamspeak version 3.3.0 to 3.5.3 (x64)
+
+# Usage
+* Inject TS3HookV2.dll into teamspeak
