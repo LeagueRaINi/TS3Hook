@@ -7,7 +7,6 @@ add_subdirectory("lib/minhook")
 
 add_library(TS3HookV2 SHARED "entry.cpp"
 	"shared/shared.h"
-	"shared/detour/detour.cpp"
 	"shared/console/console.cpp"
 	"shared/pattern_scanner/pattern_scanner.cpp"
 )

@@ -6,7 +6,6 @@
 #include <stdexcept>
 
 #include "console/console.h"
-#include "detour/detour.h"
 #include "pattern_scanner/pattern_scanner.h"
 
 #endif // SHARED_H
